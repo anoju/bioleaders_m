@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* font */
+@import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:450;
+ src: url('../../fonts/NotoSans-Medium.eot');
+ src: url('../../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/NotoSans-Medium.woff') format('woff'),
+      url('../../fonts/NotoSans-Medium.woff2') format('woff2'),
+      url('../../fonts/NotoSans-Medium.otf') format('otf'),
+      url('../../fonts/NotoSans-Medium.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:bold;
+ src: url('../../fonts/NotoSans-Bold.eot');
+ src: url('../../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/NotoSans-Bold.woff') format('woff'),
+      url('../../fonts/NotoSans-Bold.woff2') format('woff2'),
+      url('../../fonts/NotoSans-Bold.otf') format('otf'),
+      url('../../fonts/NotoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:100;
+ src: url('../../fonts/NotoSans-Thin.eot');
+ src: url('../../fonts/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),
+  	  url('../../fonts/NotoSans-Thin.woff') format('woff'),
+      url('../../fonts/NotoSans-Thin.woff2') format('woff2'),
+      url('../../fonts/NotoSans-Thin.otf') format('otf'),
+      url('../../fonts/NotoSans-Thin.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:200;
+ src: url('../../fonts/NotoSans-Light.eot');
+ src: url('../../fonts/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/NotoSans-Light.woff') format('woff'),
+      url('../../fonts/NotoSans-Light.woff2') format('woff2'),
+      url('../../fonts/NotoSans-Light.otf') format('otf'),
+      url('../../fonts/NotoSans-Light.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:300;
+ src: url('../../fonts/NotoSans-DemiLight.eot');
+ src: url('../../fonts/NotoSans-DemiLight.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/NotoSans-DemiLight.woff') format('woff'),
+      url('../../fonts/NotoSans-DemiLight.woff2') format('woff2'),
+      url('../../fonts/NotoSans-DemiLight.otf') format('otf'),
+      url('../../fonts/NotoSans-DemiLight.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Noto Sans';
+ font-weight:400;
+ src: url('../../fonts/NotoSans-Regular.eot');
+ src: url('../../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/NotoSans-Regular.woff') format('woff'),
+      url('../../fonts/NotoSans-Regular.woff2') format('woff2'),
+      url('../../fonts/NotoSans-Regular.otf') format('otf'),
+      url('../../fonts/NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+ font-family:'Nixgon L';
+ font-weight:normal;
+ src: url('../../fonts/NIXGONFONTS-L.woff') format('woff'),
+      url('../../fonts/NIXGONFONTS-L.woff2') format('woff2'),
+      url('../../fonts/NIXGONFONTS-L.otf') format('otf'),
+      url('../../fonts/NIXGONFONTS-L.ttf') format('truetype');
+}
+@font-face {
+ font-family:'Nixgon M';
+ font-weight:normal;
+ src: url('../../fonts/NIXGONFONTS-M.woff') format('woff'),
+      url('../../fonts/NIXGONFONTS-M.woff2') format('woff2'),
+      url('../../fonts/NIXGONFONTS-M.otf') format('otf'),
+      url('../../fonts/NIXGONFONTS-M.ttf') format('truetype');
+}
+@font-face {
+ font-family:'Nixgon B';
+ font-weight:normal;
+ src: url('../../fonts/NIXGONFONTS-B.woff') format('woff'),
+      url('../../fonts/NIXGONFONTS-B.woff2') format('woff2'),
+      url('../../fonts/NIXGONFONTS-B.otf') format('otf'),
+      url('../../fonts/NIXGONFONTS-B.ttf') format('truetype');
+}

@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>테스트</title>
+<link href="../static/css/reset.css" rel="stylesheet" />
+<link href="../static/css/common.css" rel="stylesheet" />
+<link href="../static/css/contents.css" rel="stylesheet" />
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script type="text/javascript" src="../static/js/ui.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+
+<style>
+	/* clear */
+	.clfix:after {display:block;content:'';clear:both;height:0;visibility:hidden;}
+	.clfix {display:inline-block;}
+	.clfix {display:block;}
+	* html .clfix {height:1%;zoom:1;}
+
+	#wrap {position:relative;width:100%;height:100%;padding:20px;box-sizing:border-box;font-size:12px;line-height:14px;}
+
+	#simulation ul li {float:left;width:30%;}
+	#simulation ul li.textArea {width:90%;}
+	#simulation ul li dt {float:left;width:80px;height:40px;}
+	#simulation ul li dt label {display:block;padding-top:4px;}
+	#simulation ul li input {height:22px;font-size:12px;padding:0 10px;}
+	.textArea #content {float:left;box-sizing:border-box;width:70%;height:200px;padding:10px;border:1px solid #aaa;}
+	#simulation ul li.textArea input {float:left;height:200px;margin-left:10px;}
+
+	#result {padding-top:10px;}
+	.fontView h2 {padding:30px 0 10px;}
+	.fontView .fontWrap {border:1px solid #aaa;}
+	.fontView .fontWrap > div {padding:40px;background:#fff;font-size:12px;line-height:1.5;}
+	.r {font-family:NanumSquare;}
+	.b {font-family:NanumSquareBold;}
+	button { display:inline-block; width:20px; height:20px; background:silver; }
+</style>
+
+</head>
+<body>
+	<div id="wrap">
+		<div id="simulation">
+			<ul class="clfix">
+				<li>
+					<dl>
+						<dt><label for="font-size">폰트사이즈</label></dt>
+						<dd>
+							<input id="font-size" type="text" name="font-size" value="12" class="text">px
+							<button class="btnMinus">-</button>
+							<button class="btnPlus">+</button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><label for="line-height">행간</label></dt>
+						<dd>
+							<input id="line-height" type="text" name="line-height" value="14" class="text">px
+							<button class="btnMinus">-</button>
+							<button class="btnPlus">+</button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><label for="letter-spacing">자간</label></dt>
+						<dd>
+							<input id="letter-spacing" type="text" name="letter-spacing" value="0" class="text">px
+							<button class="btnMinus">-</button>
+							<button class="btnPlus">+</button>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><label for="color">글자색</label></dt>
+						<dd><input id="color" type="text" name="color" maxlength="6" value="000000" class="text"></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><label for="background-color">배경색</label></dt>
+						<dd><input id="background-color" type="text" name="background-color" maxlength="6" value="ffffff" class="text"></dd><dt>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><label for="font-weight">글자 굵기</label></dt>
+						<dd><input id="font-weight" type="checkbox" name="font-weight"></dd><dt>
+					</dl>
+				</li>
+				<li class="textArea">
+					<dl>
+						<dt><label for="content">내용</label></dt>
+						<dd class="clfix"><div id="content" contenteditable="true" class="text">일하기 싫다  술 먹고 싶다  쉬고 싶다  여행 가고 싶다  놀고 싶다 로또 되면 좋겠다 아수라발발타 <br />행복한 미래는 그냥 주어지지 않습니다.<br />행복한 선택, 행복한 변화가 행복한 미래를 만듭니다.<br />KAEL은 행복한 변화를 돕는 인생경영 디자이너입니다. KAEL은 당신의 자리에서 오늘의 문제를 보고 미래를 디자인합니다. 당신의 꿈, 당신의 신간, 당신의 돈을 디자인합니다. 보아야 했지만</div><input type="button" class="btnDel" value="내용 지우기"></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div id="result">
+			<div class="fontView">
+				<h2>나눔스퀘어 Regular</h2>
+				<div class="fontWrap r">
+					<div></div>
+				</div>
+				<h2>나눔스퀘어 Bold</h2>
+				<div class="fontWrap b">
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	$('.fontWrap > div').html($('#content').html());
+
+	$('#content').on('keyup', function() {
+		$('.fontWrap > div').html($('#content').html());
+	});
+
+	$('.btnDel').on('click', function() {
+		$('#content').html('');
+		$('.fontWrap > div').html('');
+	});
+
+	function changeFontStyle() {
+		var style={},
+			fontWeight='normal';
+		if ($('#font-weight').is(':checked')) {
+			fontWeight='bold';
+		}
+
+		style={
+			'font-size' : $('#font-size').val()+'px',
+			'letter-spacing' : $('#letter-spacing').val()+'px',
+			'color' : '#'+$('#color').val(),
+			'background-color' : '#'+$('#background-color').val(),
+			'font-weight' : fontWeight
+		};
+		$('.fontWrap > div').css(style);
+	}
+
+	$('.btnMinus').on('click', function() {
+		var $input=$(this).parent().find('input');
+		var inputVal=Number($input.val());
+		$input.val(inputVal-1);
+		changeFontStyle();
+	});
+	$('.btnPlus').on('click', function() {
+		var $input=$(this).parent().find('input');
+		var inputVal=Number($input.val());
+		$input.val(inputVal+1);
+		changeFontStyle();
+	});
+	$('#font-weight').on('click', function() {
+		changeFontStyle();
+	});
+
+	$('#font-size, #line-height, #letter-spacing').on('blur', function() {
+		changeFontStyle();
+	});
+
+	$('#font-size, #line-height, #letter-spacing').on('keyup', function() {
+		changeFontStyle();
+	});
+
+	$('#font-size').on('keypress', function(e) {
+		if (e.which == 13) {
+			$('#line-height').focus();
+		}
+	});
+	$('#line-height').on('keypress', function(e) {
+		if (e.which == 13) {
+			$('#letter-spacing').focus();
+		}
+	});
+	$('#letter-spacing').on('keypress', function(e) {
+		if (e.which == 13) {
+			$('#color').focus();
+		}
+	});
+	$('#color').on('keypress', function(e) {
+		if (e.which == 13) {
+			$('#background-color').focus();
+		}
+	});
+	$('#background-color').on('keypress', function(e) {
+		if (e.which == 13) {
+			$('#content').focus();
+		}
+	});
+
+
+	var colorVal='000000';
+	var bgVal='ffffff';
+	$('#color').on('focus', function() {
+		colorVal=$(this).val();
+		$(this).val('');
+	});
+	$('#background-color').on('focus', function() {
+		bgVal=$(this).val();
+		$(this).val('');
+	});
+
+	$('#color').on('blur', function() {
+		if ($(this).val()=='') {
+			$(this).val(colorVal);
+		}
+		changeFontStyle();
+	});
+	$('#background-color').on('blur', function() {
+		if ($(this).val()=='') {
+			$(this).val(bgVal);
+		}
+		changeFontStyle();
+	});
+</script>
+</body>
+</html>
