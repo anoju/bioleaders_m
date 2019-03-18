@@ -5,10 +5,12 @@ $(function(){
 	 * ============================== */
 	headerUI();
 	footerUI();
+	tabUI();
 	layerpopup();
 	scrollAnimation();
 	scrollAnimation2(); //다른타입
-	typedEffect();	
+	typedEffect();
+	etcUI();
 	$(window).load(function(){
 		countUp();
 	});
@@ -51,6 +53,44 @@ var footerUI = function(){
 	$('.btnTop').on('click',function(e){
 		e.preventDefault();
 		$('html,body').animate({'scrollTop':0},500);
+	});
+};
+
+var tabUI = function(){
+	var $onText = '<span class="blind">현재위치</span>';
+
+	$(document).on('click','.ui-tabmenu a',function(e) {
+		e.preventDefault();
+		if(!$(this).parent().hasClass('on')){
+			var href = $(this).attr('href');
+			$(href).addClass('on').siblings('.tab-cont').removeClass('on');
+			$(this).prepend($onText).parent().addClass('active').siblings().removeClass('active').find('.blind').remove();
+		}
+
+		//웹 접근성 보완
+		var $role = $(this).attr('role');
+		if($role == 'tab'){
+			var $tabpanel = $(this).attr('aria-controls');
+			$(this).attr('aria-selected',true).closest('li').siblings().find('[role=tab]').attr('aria-selected',false);
+			$('#'+$tabpanel).attr('aria-expanded',true).siblings('[role=tabpanel]').attr('aria-expanded',false);
+		}
+	});
+
+	$(window).load(function(){
+		if($('.ui-tabmenu').length > 0){
+			$('.ui-tabmenu').each(function(index, element) {
+				var $this = $(this);
+				$this.find('li').eq(0).find('a').trigger('click');
+			});
+		}
+		if($('.tabmenu').length > 0){
+			$('.tabmenu').each(function(index, element) {
+				var $this = $(this),
+					$on = $this.find('li.on'),
+					$left = ($on.position().left - $(window).width()/2) + ($on.width()/2);
+				$this.animate({'scrollLeft':$left},500);
+			});
+		}
 	});
 };
 
@@ -168,7 +208,6 @@ function typedEffect(){
 		}, { offset: '100%', triggerOnce: true });
 	});
 }
-
 
 /* parallax scrolling motion */
 function scrollAnimation(){
@@ -306,6 +345,15 @@ var isMobile = {
 	}
 };
 
+var etcUI = function(){
+	$('.searchWrap .btnOption').click(function(e){
+		e.preventDefault();
+		$(this).closest('.searchWrap').toggleClass('on');
+	});
+	$('.searchWrap .opt .checkbox input').click(function(){
+		$(this).closest('.searchWrap').removeClass('on');
+	});
+};
 var htmlInclude = function(){
 	var $elements = $.find('*[data-include-html]');
 	if($elements.length){

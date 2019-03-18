@@ -22,6 +22,7 @@ table{border-collapse:collapse;table-layout:fixed;}
 img, select, input, button{vertical-align:middle;}
 em{font-style:normal;}
 input{font-family:'Noto Sans', sans-serif;}
+iframe{width:100%;}
 
 
 /* placeholder */
@@ -73,7 +74,13 @@ input{font-family:'Noto Sans', sans-serif;}
 .nixgonM{font-family:'Nixgon M';font-weight:normal;}
 .nixgonB{font-family:'Nixgon B';font-weight:normal;}
 
-.fc-ligntGreen{color:#35b5b1;}
+.fz-16{font-size:16px;}
+
+.fc-ligntGreen{color:#35b5b1 !important;}
+.fc-green{color:#3d644a !important;}
 
 .imgBox{margin-left:-20px;margin-right:-20px;}
 .imgBox img{width:100%;}
+.img img{width:100%;}
+
+.mt40{margin-top:40px;}
