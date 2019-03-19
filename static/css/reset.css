@@ -3,7 +3,7 @@
 
 
 /* HTML Default */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box;}
 article, aside, hgroup, header, footer, figure, figcaption, nav, section{display:block;}
 body{padding:0;margin:0;box-sizing:border-box;font-family:'Noto Sans', sans-serif;font-size:14px;color:#111;-webkit-font-smoothing:antialiased;word-break:keep-all;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;font-weight:400;line-height:1.4;}
 /* h1, h2, h3, h4, h5, h6{font-weight:400;}  */
@@ -23,6 +23,7 @@ img, select, input, button{vertical-align:middle;}
 em{font-style:normal;}
 input{font-family:'Noto Sans', sans-serif;}
 iframe{width:100%;}
+sub, sup{font-size:0.5em;}
 
 
 /* placeholder */
@@ -74,13 +75,22 @@ iframe{width:100%;}
 .nixgonM{font-family:'Nixgon M';font-weight:normal;}
 .nixgonB{font-family:'Nixgon B';font-weight:normal;}
 
+.fz-14{font-size:14px;}
 .fz-16{font-size:16px;}
 
 .fc-ligntGreen{color:#35b5b1 !important;}
+.fc-ligntGreen2{color:#9bc8c3 !important;}
 .fc-green{color:#3d644a !important;}
+.fc-black{color:#000 !important;}
 
 .imgBox{margin-left:-20px;margin-right:-20px;}
 .imgBox img{width:100%;}
 .img img{width:100%;}
 
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt25{margin-top:25px;}
+.mt30{margin-top:30px;}
 .mt40{margin-top:40px;}

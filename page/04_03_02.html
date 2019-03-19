@@ -43,7 +43,7 @@
 			<div class="innerBox">
 				<div class="videoView">
 					<div class="video">
-						<iframe width="1237" height="696" src="https://www.youtube.com/embed/bIv16itYi_0?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;rel=0&amp;showinfo=0&amp;wmode=opaque&amp;autoplay=1" frameborder="0" allowfullscreen=""></iframe>
+						<iframe width="1237" height="696" src="https://www.youtube.com/embed/bIv16itYi_0" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 					<div class="cont">가장 높은 성장률을 만들어내고, 경영의 모든 면에서지속적으로 최고의 경쟁력을 갖춘 기업</div>
 				</div>
@@ -75,14 +75,14 @@
 					</div>
 				</div>
 				<ul class="videoList">
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
-					<li><a href="#"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/PVP5ZJuI57c"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/bIv16itYi_0"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/PVP5ZJuI57c"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/bIv16itYi_0"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/PVP5ZJuI57c"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/bIv16itYi_0"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/PVP5ZJuI57c"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
+					<li><a href="https://www.youtube.com/embed/bIv16itYi_0"><img src="../static/images/contents/04/@video.png" alt="video"></a></li>
 				</ul>
 				<div class="paging">
 					<a href="#" class="btnFirst"><em>맨처음</em></a>
@@ -103,5 +103,17 @@
 		<div data-include-html="../include/footer.html"></div>
 		<!-- //하단 영역 -->
 	</div>
+<script>
+$(function(){
+	$('.videoList a').click(function(e){
+		e.preventDefault();
+		var $href = $(this).attr('href');
+		//console.log($href);
+		$(this).closest('li').addClass('on').siblings().removeClass('on');
+		$('.video iframe').attr('src',$href);
+		$('html,body').animate({'scrollTop':0},500);
+	});
+});
+</script>
 </body>
 </html>
