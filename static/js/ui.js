@@ -272,55 +272,36 @@ function scrollAnimation(){
 
 /* 레이어 팝업 */
 function layerpopup(){
-	$('.layerPopOpen').click(function(){
+	$('.ui-popOpen').click(function(e){
+		e.preventDefault();
 		var href = $(this).attr('href');
 		layerPopOpen(href);
-		return false;
 	});
-	
-	layerPopClose();
+
+	$('.ui-popClose').click(function(e){
+		e.preventDefault();
+		$(this).closest('.layerPopWrap').hide();
+		$(this).closest('.layerPop').attr('style');
+		$('body').removeClass('hidden');
+	});
 }
 
 function layerPopOpen(target){
-	var winH = $(window).outerHeight(),popH;
-	var cont = $(target).find('.layerPopCont');
-	$(target).addClass('on');
-	popContposition();
-	$(window).resize(function(){popContposition();});
+	var popup = $(target).find('.layerPop');
 	
-	function popContposition(){
-		popH = cont.outerHeight();
-		winH = $(window).outerHeight();
-		if(popH > winH){
-			cont.css({'top':'0','margin-top':0});
-		}else{
-			cont.css({'top':'50%','margin-top':-popH/2});
-		}	
-	}
 	$('body').addClass('hidden');
-	
-	
-	if($(target).find('video').length){
-		var t = $(target).find('video').attr('id');
-		var video = document.getElementById(t);
-		video.play();
-	}
+	$(target).show();
+	layerPopPosition(popup);
+	$(window).resize(function(){layerPopPosition(popup);});
 }
 
-function layerPopClose(){
-	$(document).on('click','.btnPopClose',function(){
-		$(this).closest('.layerPopWrap').removeClass('on');
-		$('body').removeClass('hidden');
-		
-		if($(this).closest('.layerPopWrap').find('video').length){
-			var t = $(this).closest('.layerPopWrap').find('video').attr('id');
-			var video = document.getElementById(t);
-			video.pause();
-			video.currentTime = 0;
-		}
-		
-		return false;
-	});
+function layerPopPosition(pop){
+	var popH = $(pop).outerHeight();
+	var parentH = $(pop).parent().height();
+	if(popH < parentH){
+		var mt = (parentH - popH)/2;
+		$(pop).css({'margin-top':mt});
+	}	
 }
 
 /* 모바일 에이전트 구분 */

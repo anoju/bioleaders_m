@@ -138,7 +138,7 @@
 .neesImg .txt{font-size:30px;font-weight:100;padding:14px 0;}
 .planImg{text-align:center;margin-top:40px;}
 .planImg dt{position:relative;}
-.planImg dt img{max-width:100%;width:320px;}
+.planImg dt img{width:100%;}
 .planImg dd img{width:100%;}
 .planImg dd ul{margin:-2px -7px;}
 .planImg dd ul li{float:left;width:33.33%;padding:0 7px;}
@@ -257,6 +257,7 @@
 .iframeView{margin-top:40px;border:1px solid #ebebeb;}
 
 .newsSlider{margin:40px -20px 40px 0;overflow:hidden;padding-right:20px;}
+.newsSlider .img{margin-bottom:10px;}
 .newsSlider .slick-list{overflow:visible;}
 .newsSlider .slick-slide{padding-right:20px;}
 .newsSlider .slick-dots{text-align:center;font-size:0;margin-top:30px;color:transparent;}

@@ -15,6 +15,7 @@
 .btnWrap .button{width:100%;}
 
 .button{position:relative;display:inline-block;border:1px solid #e1e1e1;color:#111;background:#fff;text-align:center;vertical-align:middle;box-sizing:border-box;cursor:pointer;border-radius:0px;-webkit-appearance:none;padding:0 20px;line-height:38px;font-size:12px;white-space:nowrap;font-weight:400;}
+.button.round{border-radius:30px}
 .button.green{color:#fff;background-color:#1e7d7a;border-color:#1e7d7a;}
 
 .button.link,
@@ -33,7 +34,7 @@
 .btnIconTel{background-image:url(../images/btn/btnIconTel.png);}
 .btnIconFax{background-image:url(../images/btn/btnIconFax.png);}
 
-.btnMore{display:block;position:relative;width:120px;height:30px;padding-left:30px;border:1px solid #d7d7d7;font-size:8px;color:#111;letter-spacing:2px;text-transform:uppercase;line-height:30px;transition:all .3s ease;}
+.btnMore{display:block;position:relative;width:120px;height:30px;padding-left:13px;border:1px solid #d7d7d7;font-size:8px;color:#111;letter-spacing:2px;text-transform:uppercase;line-height:30px;transition:all .3s ease;}
 .btnMore:after{content:'';display:block;position:absolute;top:50%;right:0;width:5px;height:2px;margin-top:-1px;margin-right:15px;background:#111;}
 .btnMore:hover{color:#fff;background:#111;}
 .btnMore:hover:after{background:#fff;}
@@ -183,3 +184,7 @@
 .video{position:relative;width:100%;padding-bottom:56.25%;}
 .video iframe{position:absolute;width:100%;height:100%;}
 .videoView .cont{word-break:break-all;text-align:center;margin-top:28px;padding:0 20px;font-size:16px;font-weight:normal;}
+
+/* layer popup */
+.layerPopWrap{display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.7);padding:20px;overflow:auto;z-index:100;}
+.layerPop{position:relative;background:#fff;}

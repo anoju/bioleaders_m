@@ -55,7 +55,7 @@
 							<a href="#" data-animation="fadeInUp" data-delay="600">MORE</a>
 						</div>
 					</div>
-					<div class="slideImg3">
+					<!-- <div class="slideImg3">
 						<div class="innerBox">
 							<h1 class="typedEffect">
 								<span class="typedStrings">
@@ -66,7 +66,7 @@
 							<p data-animation="fadeInUp" data-delay="300">변함없는 생명존중의 가치를 <br />실천하겠습니다</p>
 							<a href="#" data-animation="fadeInUp" data-delay="600">MORE</a>
 						</div>
-					</div>
+					</div> -->
 					<div class="slideImg4">
 						<div class="innerBox">
 							<h1 class="typedEffect">
@@ -79,7 +79,7 @@
 							<a href="#" data-animation="fadeInUp" data-delay="600">MORE</a>
 						</div>
 					</div>
-					<div class="slideImg5">
+					<!-- <div class="slideImg5">
 						<div class="innerBox">
 							<h1 class="typedEffect">
 								<span class="typedStrings">
@@ -102,7 +102,7 @@
 							<p data-animation="fadeInUp" data-delay="300">변함없는 생명존중의 가치를 <br />실천하겠습니다</p>
 							<a href="#" data-animation="fadeInUp" data-delay="600">MORE</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 			<section class="mainSec02">
@@ -131,7 +131,7 @@
 			</section>
 			<section class="mainSec03">
 				<div class="innerBox">
-					<h1>R &amp; D</h1>
+					<h1 class="nixgonL">R &amp; D</h1>
 					<ul class="mainSlider2">
 						<li>
 							<p class="img"><img src="../static/images/main/img_sec03_1.jpg" alt="img" /></p>
@@ -155,11 +155,11 @@
 				</div>
 			</section>
 			<section class="mainSec04">
-				<h1>Business</h1>
+				<h1 class="nixgonL">Business</h1>
 				<div class="mainSlider3">
 					<div class="slider" style="background-image:url('../static/images/main/bg_sec04_1.jpg')">
 						<div class="innerBox">
-							<h2 data-animation="fadeIn" data-delay="300">Bio <br />Leaders<br />Consumer</h2>
+							<h2 data-animation="fadeIn" data-delay="300" class="nixgonL">Bio <br />Leaders<br />Consumer</h2>
 							<div class="box" data-animation="fadeInUp">
 								<p class="number">02</p>
 								<h3>컨슈머사업</h3>
@@ -171,7 +171,7 @@
 					</div>
 					<div class="slider" style="background-image:url('../static/images/main/bg_sec04_1.jpg')">
 						<div class="innerBox">
-							<h2 data-animation="fadeIn" data-delay="300">Bio <br />Leaders<br />Consumer</h2>
+							<h2 data-animation="fadeIn" data-delay="300" class="nixgonL">Bio <br />Leaders<br />Consumer</h2>
 							<div class="box" data-animation="fadeInUp">
 								<p class="number">02</p>
 								<h3>컨슈머사업</h3>
@@ -184,7 +184,7 @@
 				</div>
 			</section>
 			<section class="mainSec05">
-				<h1>Product</h1>
+				<h1 class="nixgonL">Product</h1>
 				<div class="innerBox">
 					<p class="text" data-animation="fadeInUp" data-delay="200">우수한 기술력의 제품으로 <br />고객의 건강한 삶을 약속합니다</p>
 					<img src="../static/images/main/img_sec05_1.jpg" alt="img" />
@@ -206,7 +206,7 @@
 			</section>
 			<section class="mainSec06">
 				<div class="innerBox">
-					<h1>GROUP COMPANY</h1>
+					<h1 class="nixgonL">GROUP COMPANY</h1>
 					<h2>Global health care group</h2>
 					<p class="text">Total health care service를 제공하는 <br />Global health care group이 되겠습니다. </p>
 					<ul>
@@ -224,6 +224,21 @@
 		<div data-include-html="../include/footer.html"></div>
 		<!-- //하단 영역 -->
 	</div>
+
+	<!-- 팝업 -->
+	<div id="todayPop" class="layerPopWrap">
+		<div class="layerPop">
+			<div class="img"><img src="../static/images/main/mainPop.png" alt=""></div>
+			<div class="mainPopCont">
+				<label class="checkbox">
+					<input type="checkbox" name="today" id=""><i></i>
+					<span class="lbl">오늘하루 더이상 이창을 열지 않습니다.</span>
+				</label>
+				<button class="button round ui-popClose">닫기</button>
+			</div>
+		</div>
+	</div>
+	<!-- //팝업 -->
 <script>
 	$(document).on('ready', function() {
 
@@ -252,6 +267,10 @@
 			arrows:false
 		});
 		
+		//팝업열기
+		$(window).load(function(){
+			layerPopOpen('#todayPop');
+		});
 	});
 </script>
 </body>

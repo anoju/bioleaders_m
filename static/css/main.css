@@ -1,29 +1,30 @@
 @charset "utf-8";
+.main #container{padding-bottom:0;}
 .main #footerWrap{margin-top:0;background:#fff;}
 .main img { max-width:100%;}
 
 .mainSec01 {position:relative;}
 .mainSec01 .mainSlider .innerBox { overflow:hidden;}
-.mainSec01 .slideImg1 { background:url('../images/main/img_visual1.jpg') no-repeat center center; background-size:auto 100%;}
-.mainSec01 .slideImg2 { background:url('../images/main/img_visual2.jpg') no-repeat center center; background-size:auto 100%;}
+.mainSec01 .slideImg1 { background:url('../images/main/img_visual1.png') no-repeat center center; background-size:auto 100%;}
+.mainSec01 .slideImg2 { background:url('../images/main/img_visual2.png') no-repeat center center; background-size:auto 100%;}
 .mainSec01 .slideImg3 { background:url('../images/main/img_visual3.jpg') no-repeat center center; background-size:auto 100%;}
-.mainSec01 .slideImg4 { background:url('../images/main/img_visual4.jpg') no-repeat center center; background-size:auto 100%;}
+.mainSec01 .slideImg4 { background:url('../images/main/img_visual4.png') no-repeat center center; background-size:auto 100%;}
 .mainSec01 .slideImg5 { background:url('../images/main/img_visual5.jpg') no-repeat center center; background-size:auto 100%;}
 .mainSec01 .slideImg6 { background:url('../images/main/img_visual6.jpg') no-repeat center center; background-size:auto 100%;}
-.mainSec01 [class*=slideImg] { position:relative; top:0; left:0; right:0; padding-top:122.2%; transition:all .6s ease;}
+.mainSec01 [class*=slideImg] { position:relative; top:0; left:0; right:0; padding-top:142.2%; transition:all .6s ease;}
 .mainSec01 [class*=slideImg] .innerBox { position:absolute; top:0;}
-.mainSec01 [class*=slideImg] h1 { height:100px; margin-top:10%; font-size:25px; color:#fff; font-family:'Century Gothic'; letter-spacing: 15px; line-height:1.3;}
+.mainSec01 [class*=slideImg] h1 { height:100px; margin-top:10%; font-size:25px; color:#fff; font-family:'Century Gothic'; letter-spacing: 10px; line-height:1.3;font-weight:normal;}
 .mainSec01 [class*=slideImg] p { margin-top:5%; font-size:17px; color:#fff; font-weight:100; line-height:1.4;}
 .mainSec01 [class*=slideImg] a { display:block; position:relative; width:120px; height:30px; margin-top:18%; padding-left:15px; border:1px solid rgba(255,255,255,0.2); font-size:12px; color:#fff; line-height:30px; transition:all .3s ease;}
 .mainSec01 [class*=slideImg] a:after { content:''; display:block; position:absolute; top:50%; right:0; width:5px; height:2px; margin-top:-1px; margin-right:15px; background:#fff;}
 .mainSec01 [class*=slideImg] a:hover { color:#333; background:#fff;}
 .mainSec01 [class*=slideImg] a:hover:after { background:#333;}
-.mainSec01 .slick-dots { position:absolute; bottom:23%; left:0; right:0; width:100%; text-align:center;}
+.mainSec01 .slick-dots { position:absolute; bottom:40%; left:0; right:0; width:100%; text-align:center;}
 .mainSec01 .slick-dots li { display:inline-block; width:6px; height:6px; margin:0 3px; border:1px solid #fff; border-radius:50%; font-size:0; background:none;}
 .mainSec01 .slick-dots li.slick-active { background:#fff;}
 
 .mainSec02 { background:#f2f7f4;}
-.mainSec02 .innerBox { margin-top:-20%;}
+.mainSec02 .innerBox { margin-top:-43%;}
 .mainSec02 .innerBox > div { position:relative; padding:25px 30px 40px;}
 .mainSec02 .innerBox > div h1 { font-size:20px; color:#fff; font-weight:100;}
 .mainSec02 .innerBox > div ul { margin-top:5px;}
@@ -42,7 +43,7 @@
 .mainSec02 .innerBox > .type2 li + li { border-color:#ededed;}
 
 .mainSec03 { background:#f2f7f4;}
-.mainSec03 h1 { padding-top:50px; margin-bottom:37px; font-size:30px; color:#111; font-weight:100; text-align:center; letter-spacing: 10px;}
+.mainSec03 h1 { padding-top:50px; margin-bottom:37px; font-size:30px; color:#111; text-align:center; letter-spacing: 10px;}
 .mainSec03 h2 { margin-top:20px; font-size:15px; color:#111; font-weight: 200;}
 .mainSec03 ul { margin-left:-10px;}
 .mainSec03 ul li { float:left; padding-left:10px;}
@@ -53,8 +54,8 @@
 .mainSec03 .slick-dots li.slick-active { border-color:#313131; background:#313131;}
 
 .mainSec04 { overflow:hidden; position:relative;}
-.mainSec04 h1 { position:absolute; top:60px; left:0; right:0; z-index:1; font-size:30px; color:#fff; font-weight:100; text-align:center; letter-spacing: 10px; text-transform:uppercase;}
-.mainSec04 h2 { position:relative; z-index:1; padding-top:150px; margin-bottom:-15px; font-size:30px; color:#fff; font-weight:100; text-align:left; letter-spacing: 10px;}
+.mainSec04 h1 { position:absolute; top:60px; left:0; right:0; z-index:1; font-size:30px; color:#fff; text-align:center; letter-spacing: 10px; text-transform:uppercase;}
+.mainSec04 h2 { position:relative; z-index:1; padding-top:150px; margin-bottom:-18px; font-size:30px; color:#fff; padding-left:20px;text-align:left; letter-spacing: 10px;}
 .mainSec04 .mainSlider3 .slider { position:relative; padding-bottom:90px; background-position:center 0; background-size:cover;}
 .mainSec04 .mainSlider3 .box { padding:50px 40px; background:#879486;}
 .mainSec04 .mainSlider3 .box .number { position:relative; font-size:20px; color:#fff; font-weight:100; line-height:1;}
@@ -68,7 +69,7 @@
 .mainSec04 .mainSlider3 .slick-dots li.slick-active { border-color:#fff; background:#fff;}
 
 .mainSec05 { overflow:hidden; width:100%; background:#fafafa;}
-.mainSec05 h1 { padding-top:50px; font-size:30px; color:#111111; font-weight:100; text-align:center; letter-spacing: 15px; text-transform:uppercase;}
+.mainSec05 h1 { padding-top:50px; font-size:30px; color:#111111; text-align:center; letter-spacing: 15px; text-transform:uppercase;}
 .mainSec05 .text { margin-top:20px; font-size:12px; color:#111; font-weight:200; text-align:center;}
 .mainSec05 .text span { display:inline-block; width:95px; border-bottom:1px solid rgba(17,17,17,0.7); margin-right:5px;}
 .mainSec05 .innerBox { background-image:url('../images/main/img_sec05_1.jpg'); background-repeat:no-repeat; background-position:600px 88px;}
@@ -85,10 +86,10 @@
 .mainSec05 .slick-dots li.slick-active { border-color:#313131; background:#313131;}
 
 .mainSec06 { padding-bottom:50px; background-image:url('../images/main/bg_sec06.jpg'); background-position:center 0; background-size:cover;}
-.mainSec06 h1 { padding-top:50px; font-size:30px; color:#fff; font-weight:100; text-align:center; letter-spacing: 15px; text-transform:uppercase;}
+.mainSec06 h1 { padding-top:50px; font-size:30px; color:#fff; text-align:center; letter-spacing: 15px; text-transform:uppercase;}
 .mainSec06 h2 { padding-top:20px; text-align:center; font-size:15px; color:#fff; font-weight:400; letter-spacing:3px;}
 .mainSec06 h2:before { content:''; display:block; width:1px; height:30px; margin:0 auto 30px; background:#fff;}
-.mainSec06 .text { margin-top:15px; color:#fff; font-weight:300; text-align:center; font-size:12px;}
+.mainSec06 .text { margin-top:15px; color:#fff; font-weight:200; text-align:center; font-size:12px;}
 .mainSec06 ul { width:260px; margin:50px auto 0;}
 .mainSec06 ul li { float:left; width:50%; padding:0 5px; margin-bottom:10px;}
 .mainSec06 ul li a { display:block; position:relative; width:120px; height:120px; padding-top:30px; border-radius:50%; text-align:center; font-size:14px; color:#111; background:rgba(255,255,255,0.95); transition: all .3s ease;}
@@ -100,7 +101,14 @@
 .mainSec06 ul li a:hover span:after,
 .mainSec06 ul li a:hover span:before { background:#fff;}
 
-
+.mainPopCont{padding:30px 10px 40px;text-align:center;}
+.mainPopCont .checkbox{display:block;font-size:16px;padding-top:35px;margin-bottom:18px;}
+.mainPopCont .checkbox > input, 
+.mainPopCont .checkbox > i{width:27px;height:27px;left:50%;top:0;margin-left:-13.5px;border-color:#ebebeb;}
+.mainPopCont .checkbox > i:before{left:7px;top:3px;width:16px;height:6px;border-width:0 0 2px 2px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.mainPopCont .checkbox > input:checked + i{border-color:#ebebeb;}
+.mainPopCont .checkbox .lbl{padding-left:0;}
+.mainPopCont .button{width:175px;box-shadow:0 10px 20px #eee}
 
 
 
