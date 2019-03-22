@@ -11,7 +11,7 @@
 /* ==============================
  * layout
  * ============================== */
- #wrap{min-width:320px;}
+ #wrap{min-width:320px;overflow:hidden;}
  body.hidden{overflow:hidden;}
 .innerBox{position:relative;padding:0 20px;}
 .innerBox:after{content:'';display:block;clear:both;}
@@ -48,7 +48,7 @@
 .gnbWrap .language a.on{border-bottom:2px solid #111111;color:#111111;}
 
 /* container */ 
-#container{position:relative;margin-top:75px;padding-bottom:50px;border-top:1px solid #eaeaea;z-index:1;overflow:hidden;}
+#container{position:relative;margin-top:75px;padding-bottom:50px;border-top:1px solid #eaeaea;z-index:1;}
 .lnbWrap{position:relative;text-align:center;padding:12px 0;border-bottom:1px solid #e5e5e5;}
 .lnbWrap h2{font-size:25px;font-weight:100;}
 .lnbWrap a{display:block;width:30px;height:30px;position:absolute;top:50%;margin-top:-15px;font-size:0;color:transparent;background-repeat:no-repeat;background-size:contain;}
